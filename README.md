@@ -10,7 +10,7 @@
 ## Introduction
 
 Pytorch implementation of the several Deep Stereo Matching Network(DSMnet)
-Supported models:
+### Supported models:
 
 - [Dispnet](http://arxiv.org/abs/1512.02134)
 - [DispnetC](http://arxiv.org/abs/1512.02134)
