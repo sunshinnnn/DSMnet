@@ -1,4 +1,4 @@
-#Pytorch implementation of the several Deep Stereo Matching Network(DSMnet)
+##Pytorch implementation of the several Deep Stereo Matching Network(DSMnet)
 
 ## Contents
 
@@ -51,12 +51,9 @@ Use the following command to evaluate the trained DSM(such as DispnetCorr) on  a
 You need see the file(submit_dispnetcorr_kitti.sh) for details.
 
 ### Pretrained Model
-| KITTI |
-|---|
-|[DispnetC-pretrained-kitti](https://pan.baidu.com/s/1Dy9FitFASBFtTBoKAhodRg)|
-| KITTI-raw-ss |
-|---|
-|[DispnetC-pretrained-kitti-raw-ss](https://pan.baidu.com/s/1AWz9rJVoAuXn2KjCUvllBw)|
+| KITTI | KITTI-raw-ss |
+|---|---|
+|[DispnetC-pretrained-kitti](https://pan.baidu.com/s/1Dy9FitFASBFtTBoKAhodRg)|[DispnetC-pretrained-kitti-raw-ss](https://pan.baidu.com/s/1AWz9rJVoAuXn2KjCUvllBw)|
 
 
 ## Results
