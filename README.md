@@ -1,35 +1,22 @@
-Pytorch implementation of the several Deep Stereo Matching(DSM) algorithm, such as Dispnet, DispnetCorr, GCnet, iResnet, PSMnet. 
-The code is only for scientific or personnal use. Please contact me/INRIA for commercial use.
-Email: wangyf_1991@163.com
-
-Copyright (C) 2018 yu-feng wang
-
-License:
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>
-
+#Pytorch implementation of the several Deep Stereo Matching Network(DSMnet)
 
 ## Contents
 
 1. [Introduction](#introduction)
 2. [Usage](#usage)
 3. [Results](#results)
-4. [Contacts](#contacts)
+4. [Licensing](#Licensing)
 
 ## Introduction
 
+Pytorch implementation of the several Deep Stereo Matching Network(DSMnet)
+Supported models:
 
+- [Dispnet](http://arxiv.org/abs/1512.02134)
+- [DispnetC](http://arxiv.org/abs/1512.02134)
+- [GCnet](http://arxiv.org/abs/1703.04309)
+- [iResnet](http://arxiv.org/abs/1712.01039v1)
+- [PSMnet](http://arxiv.org/pdf/1803.08669)
 
 ## Usage
 
@@ -44,29 +31,22 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>
 As an example, use the following command to train a DSM(such as DispnetCorr) on  a dataset(such as KITTI2015)
 
 ```
-./train_dispnetcorr_kitti.sh
+./DSMnet_train_kitti.sh
 ```
 
 As another example, use the following command to finetune a DSM(such as DispnetCorr) on  a dataset(such as KITTI2015)
 
 ```
-./finetune_dispnetcorr_kitti.sh
+./DSMnet_finetune.sh
 ```
 You need see the files(train_dispnetcorr_kitti.sh and train_dispnetcorr_kitti.sh) for details. You can alse change the DSM or dataset for train or finetune in the files.
 
-### test
-Use the following command to evaluate the trained DSM(such as DispnetCorr) on  a dataset(such as KITTI2015 train data) with ground truth.
-
-```
-./test_dispnetcorr_kitti.sh
-```
-You need see the file(test_dispnetcorr_kitti.sh) for details.
 
 ### submit
 Use the following command to evaluate the trained DSM(such as DispnetCorr) on  a dataset(such as KITTI2015 test data) without ground truth.
 
 ```
-./submit_dispnetcorr_kitti.sh
+./DSMnet_submit.sh
 ```
 You need see the file(submit_dispnetcorr_kitti.sh) for details.
 
@@ -74,30 +54,29 @@ You need see the file(submit_dispnetcorr_kitti.sh) for details.
 | KITTI |
 |---|
 |[DispnetC-pretrained-kitti](https://pan.baidu.com/s/1Dy9FitFASBFtTBoKAhodRg)|
+| KITTI-raw-ss |
+|---|
+|[DispnetC-pretrained-kitti-raw-ss](https://pan.baidu.com/s/1AWz9rJVoAuXn2KjCUvllBw)|
 
 
 ## Results
 
 ### Qualitative results
 #### Left image
-<img align="center" src="http://www.cvlibs.net/datasets/kitti/results/efb9db97938e12a20b9c95ce593f633dd63a2744/image_0/000004_10.png">
+<img align="center" src="https://github.com/wyf2017/DSMnet/tree/master/deploy/10L.png">
+
+#### Right image
+<img align="center" src="https://github.com/wyf2017/DSMnet/tree/master/deploy/10R.png">
 
 #### Predicted disparity
-<img align="center" src="http://www.cvlibs.net/datasets/kitti/results/efb9db97938e12a20b9c95ce593f633dd63a2744/result_disp_img_0/000004_10.png">
+<img align="center" src="https://github.com/wyf2017/DSMnet/tree/master/deploy/dispL.png">
 
-#### Error
-<img align="center" src="http://www.cvlibs.net/datasets/kitti/results/efb9db97938e12a20b9c95ce593f633dd63a2744/errors_disp_img_0/000004_10.png">
-
-### Visualization of Receptive Field
-We visualize the receptive fields of different settings of PSMNet, full setting and baseline.
-
-Full setting: dilated conv, SPP, stacked hourglass
-
-Baseline: no dilated conv, no SPP, no stacked hourglass
-
-The receptive fields were calculated for the pixel at image center, indicated by the red cross.
-
-<img align="center" src="https://user-images.githubusercontent.com/11732099/37876179-6d6dd97e-307b-11e8-803e-bcdbec29fb94.png">
-
-
-Any discussions or concerns are welcomed!
+## Licensing
+Unless otherwise stated, the source code and trained Torch and Python
+model files are copyright Carnegie Mellon University and licensed
+under the [Apache 2.0 License](./LICENSE).
+Portions from the following third party sources have
+been modified and are included in this repository.
+These portions are noted in the source files and are
+copyright their respective authors with
+the licenses listed.
