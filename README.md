@@ -61,13 +61,12 @@ You need see the file(submit_dispnetcorr_kitti.sh) for details.
 ### Qualitative results
 #### Left image。
 ![image](https://github.com/sunshinnnn/DSMnet/blob/master/deploy/10L.png)
-<img align="center" src="https://github.com/wyf2017/DSMnet/tree/master/deploy/10L.png">
 
 #### Right image
-<img align="center" src="https://github.com/wyf2017/DSMnet/tree/master/deploy/10R.png">
+![image](https://github.com/sunshinnnn/DSMnet/blob/master/deploy/10R.png)
 
 #### Predicted disparity
-<img align="center" src="https://github.com/wyf2017/DSMnet/tree/master/deploy/dispL.png">
+![image](https://github.com/sunshinnnn/DSMnet/blob/master/deploy/dispL.png)
 
 ## Licensing
 Unless otherwise stated, the source code and trained Torch and Python
