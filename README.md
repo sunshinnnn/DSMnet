@@ -59,7 +59,7 @@ You need see the file(submit_dispnetcorr_kitti.sh) for details.
 ## Results
 
 ### Qualitative results
-#### Left image。
+#### Left image
 ![image](https://github.com/sunshinnnn/DSMnet/blob/master/deploy/10L.png)
 
 #### Right image
